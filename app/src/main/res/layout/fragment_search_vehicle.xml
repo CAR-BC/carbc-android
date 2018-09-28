@@ -1,0 +1,188 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.SearchVehicle">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/homemyVehicle"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Vehicle Number"
+                android:textSize="25dp"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/search_vehicle_id"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:background="@color/clrWhite"
+                />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Search"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Owner :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_owner_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration No :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_reg_no_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_type_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_model_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fuel Type :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_fuel_type_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/homeAddTx">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capacity :"
+                    android:textSize="20dp"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/search_capacity_txt"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/search_request_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request More Info"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+
+</FrameLayout>

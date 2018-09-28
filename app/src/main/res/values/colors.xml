@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="homeAddTx">#68B5F1</color>
+    <color name="homemyVehicle">#E8BB2C</color>
+    <color name="homesearchVehicle">#2EA921</color>
+    <color name="homeConfirmTx">#EA4C4C</color>
+    <color name="clrWhite">#FFFFFF</color>
+</resources>

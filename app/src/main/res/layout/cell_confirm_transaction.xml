@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:orientation="vertical"
+    android:background="@color/homemyVehicle">
+
+    <TextView
+        android:id="@+id/confirm_trasaction_vid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="veicle ID"/>
+
+    <TextView
+        android:id="@+id/confirm_trasaction_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="description"/>
+
+    <TextView
+        android:id="@+id/confirm_trasaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="DD/MM/YYYY"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_marginVertical="10dp"
+            android:id="@+id/confirm_trasaction_request_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request more info"/>
+
+        <Button
+            android:id="@+id/confirm_trasaction_confirm"
+            android:layout_marginVertical="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:background="@color/homeConfirmTx"/>
+
+    </LinearLayout>
+
+</LinearLayout>

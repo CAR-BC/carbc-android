@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.Service_and_Repair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/homemyVehicle">
+
+            <Spinner
+                android:id="@+id/service_and_repair_vehicle_id"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"></Spinner>
+
+            <TextView
+                android:id="@+id/my_history_info_vehicle_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="car"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
