@@ -19,7 +19,7 @@ import com.example.madhushika.carbc_android_v2.R;
  * Use the {@link Service_repair_location#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Service_repair_location extends ListFragment {
+public class Service_repair_location extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,16 +76,6 @@ public class Service_repair_location extends ListFragment {
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
     @Override
     public void onDetach() {

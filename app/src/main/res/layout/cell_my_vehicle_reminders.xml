@@ -10,19 +10,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/confirm_trasaction_vid"
+            android:id="@+id/my_history_reminder_vid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="veicle ID"/>
 
         <TextView
-            android:id="@+id/confirm_trasaction_description"
+            android:id="@+id/my_history_reminder_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="description"/>
 
         <TextView
-            android:id="@+id/confirm_trasaction_date"
+            android:id="@+id/my_history_reminder_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="DD/MM/YYYY"/>

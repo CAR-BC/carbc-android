@@ -3,12 +3,17 @@ package Fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.madhushika.carbc_android_v2.R;
+
+import Adapters.Location_Pager_Adapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,17 +43,12 @@ public class Service_and_Repair extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+
      * @return A new instance of fragment Service_and_Repair.
      */
     // TODO: Rename and change types and number of parameters
-    public static Service_and_Repair newInstance(String param1, String param2) {
+    public static Service_and_Repair newInstance() {
         Service_and_Repair fragment = new Service_and_Repair();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -65,24 +65,45 @@ public class Service_and_Repair extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_service_and__repair, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_service_and_repair_running_repair, container, false);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
+
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("Location"));
+        tabLayout.addTab(tabLayout.newTab().setText("Map"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
+        final Location_Pager_Adapter adapter =new Location_Pager_Adapter(getFragmentManager(),
+                tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
         }
     }
 

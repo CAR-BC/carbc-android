@@ -25,7 +25,7 @@ import Objects.PendingBlock;
  * Use the {@link ConfirmTransaction#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConfirmTransaction extends android.app.ListFragment{
+public class ConfirmTransaction extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -45,17 +45,16 @@ public class ConfirmTransaction extends android.app.ListFragment{
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     *
      * @return A new instance of fragment ConfirmTransaction.
      */
     // TODO: Rename and change types and number of parameters
-    public static ConfirmTransaction newInstance(String param1, String param2) {
+    public static ConfirmTransaction newInstance() {
         ConfirmTransaction fragment = new ConfirmTransaction();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
         return fragment;
     }
 
@@ -79,7 +78,10 @@ public class ConfirmTransaction extends android.app.ListFragment{
 
         ListView confirm_transacion_list =(ListView)view.findViewById(R.id.list_view_confirm_transaction);
 
-        final PendingBlock[] pendingBlocks = new PendingBlock[6];// should add db helper
+        PendingBlock b = new PendingBlock("vdja","ahbwe","huakdsb");
+        final PendingBlock[] pendingBlocks = new PendingBlock[1];
+        pendingBlocks[0]= b;
+        // should add db helper
 
         confirm_transacion_list.setAdapter(new BaseAdapter() {
             @Override
@@ -101,7 +103,6 @@ public class ConfirmTransaction extends android.app.ListFragment{
             public View getView(int position, View convertView, ViewGroup parent) {
                 PendingBlock pendingBlock = pendingBlocks[position];
                 View cellUser = null;
-                Context context;
 
                 if (convertView == null){
 
@@ -163,7 +164,7 @@ public class ConfirmTransaction extends android.app.ListFragment{
             }
         });
 
-        return inflater.inflate(R.layout.fragment_confirm_transaction, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -173,16 +174,16 @@ public class ConfirmTransaction extends android.app.ListFragment{
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+////        if (context instanceof OnFragmentInteractionListener) {
+////            mListener = (OnFragmentInteractionListener) context;
+////        } else {
+////            throw new RuntimeException(context.toString()
+////                    + " must implement OnFragmentInteractionListener");
+////        }
+//    }
 
     @Override
     public void onDetach() {
@@ -205,7 +206,7 @@ public class ConfirmTransaction extends android.app.ListFragment{
         void onFragmentInteraction(Uri uri);
     }
 
-    public class Placeholder {
+    private class Placeholder {
         public TextView vehicle_Id;
         public TextView vehicle_description;
         public TextView initiate_date;

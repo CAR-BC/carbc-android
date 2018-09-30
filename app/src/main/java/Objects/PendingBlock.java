@@ -5,6 +5,12 @@ public class PendingBlock {
     private String descr;
     private String init_date;
 
+    public PendingBlock(String vid, String descr, String init_date) {
+        this.vid = vid;
+        this.descr = descr;
+        this.init_date = init_date;
+    }
+
     public String getVid() {
         return vid;
     }
