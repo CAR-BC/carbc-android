@@ -6,4 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".Singup">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/initial_layout_user_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/clrWhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/initial_user_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="User Name"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/initial_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/initial_layout_email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/initial_email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Identity card number: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/initial_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter National ID number"
+                android:maxLines="1"
+                android:inputType="textWebEmailAddress"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/initial_layout_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/initial_label_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Password"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/initial_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="5dp" />
+            <TextView
+                android:id="@+id/password_strong_text"
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:text="Enter strong password with at least 8 characters with a uppercase letter, a number and a symbol"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/initial_layout_confirm_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/initial_label_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Confirm Password"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/initial_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter password again"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Register"
+            android:textSize="20dp" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

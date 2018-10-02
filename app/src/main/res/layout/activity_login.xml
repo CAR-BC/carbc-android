@@ -6,4 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/login_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@color/clrWhite"
+            android:hint="Enter username"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/clrWhite"
+            android:hint="Enter Password"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/clrWhite"
+            android:text="Log In" />
+            <!--android:onClick="onClick"-->
+
+        <Button
+            android:id="@+id/new_user_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Now?"
+            android:background="@color/clrWhite"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:background="@color/clrWhite"
+            android:textColor="@color/colorPrimary"/>
+
+
+
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
