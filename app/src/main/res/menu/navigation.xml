@@ -9,22 +9,22 @@
     <item
         android:id="@+id/navigation_add_event"
         android:icon="@drawable/ic_round_swap_horiz_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="Add Transaction" />
 
     <item
         android:id="@+id/navigation_view_vehicle"
         android:icon="@drawable/ic_round_directions_car_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="Search Vehicle" />
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="Notifications" />
 
     <item
         android:id="@+id/navigation_my_vehicle"
         android:icon="@drawable/ic_outline_assistant_photo_black_24dp"
-        android:title="@string/title_home" />
+        android:title="My Vehicle" />
 
     <!--<item-->
         <!--android:id="@+id/navigation_menu"-->

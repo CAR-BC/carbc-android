@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                         myFragment = Transaction_Registered.newInstance();
                         break;
                     case R.id.navigation_view_vehicle:
-//                        myFragment = SearchVehicle.newInstance();
-                        myFragment = Service_and_Repair.newInstance();
+                        myFragment = SearchVehicle.newInstance();
+                        //myFragment = Service_and_Repair.newInstance();
                         break;
                     case R.id.navigation_notifications:
                         myFragment =  ConfirmTransaction.newInstance();
@@ -50,17 +50,16 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_my_vehicle:
                         myFragment = MyHistory.newInstance();
                         break;
-
                 }
+
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, myFragment);
+                transaction.replace(R.id.frame_layout, myFragment).addToBackStack(null);
                 transaction.commit();
                 return true;
             }
         });
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
         transaction.replace(R.id.frame_layout, Home.newInstance());
         transaction.commit();
     }

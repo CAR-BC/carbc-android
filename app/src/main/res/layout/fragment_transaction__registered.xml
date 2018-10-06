@@ -1,10 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="Fragments.Transaction_Registered">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +36,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
-                    android:src="@drawable/ic_outline_arrow_back_white_24dp"/>
+                    android:src="@drawable/ic_outline_arrow_back_white_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -46,169 +46,336 @@
                     android:layout_marginLeft="112dp"
                     android:layout_marginTop="9dp"
                     android:text="New Transaction"
-                    android:textSize="15dp"
-                    android:textColor="@color/clrWhite"/>
+                    android:textColor="@color/clrWhite"
+                    android:textSize="15dp" />
 
             </RelativeLayout>
 
 
         </android.support.v7.widget.Toolbar>
-        
-        <GridLayout
-            android:rowCount="4"
-            android:columnCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:padding="10dp"
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <Spinner
+                android:id="@+id/vehicle_number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="16dp"></Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/vehicle_class"/>
+
+        </LinearLayout>
+
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="30dp"
+            android:rowCount="5">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/tr_reg_new_vehicle1"
+                android:id="@+id/tr_buy_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginBottom="16dp"
+                android:alwaysDrawnWithCache="true"
+                android:padding="16dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_dashboard_black_24dp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
                     <TextView
-                        android:text="Register"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Buy Vehicle" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/tr_reg_new_vehicle2"
+                android:id="@+id/tr_sell_vehicle2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="3dp"
+                android:padding="16dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_dashboard_black_24dp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
                     <TextView
-                        android:text="Register"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Sell Vehicle" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/tr_reg_new_vehicle3"
+                android:id="@+id/tr_service_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="3dp"
+                android:padding="16dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_dashboard_black_24dp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
                     <TextView
-                        android:text="Register"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Service or Repair" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/tr_reg_new_vehicle4"
+                android:id="@+id/tr_reg_new_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="3dp"
+                android:padding="16dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_dashboard_black_24dp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
                     <TextView
-                        android:text="Register"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Register new Vehicle" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/tr_reg_new_vehicle5"
+                android:id="@+id/tr_insure_vehicle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_dashboard_black_24dp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
                     <TextView
-                        android:text="Register"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Insure" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tr_leasing_vehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leasing" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tr_leasing_payment_vehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:padding="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leasing Payment" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tr_emision_vehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emision Testing" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tr_regatcarbc_vehicle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="3dp"
+                android:padding="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dashboard_black_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register new Vehicle at CAR.Bc" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
         </GridLayout>
+
     </LinearLayout>
 
 

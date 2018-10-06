@@ -9,8 +9,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="6dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/back_button"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="112dp"
+                    android:layout_marginTop="9dp"
+                    android:text="Login to CAR.BC"
+                    android:textSize="15dp"
+                    android:textColor="@color/clrWhite"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
+
+
 
         <EditText
             android:id="@+id/login_name"
@@ -61,6 +104,6 @@
 
 
     </LinearLayout>
-
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
